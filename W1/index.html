@@ -41,9 +41,26 @@
 
       for(let i = 0; i < numMax; i++)
       {
-         numbers.push(i+1)
+         numbers.push(i)
+         /* Fizz Buzz, but crappy code edition due to brain still in summer mode. */ 
+         var remainder2 = i % 2;
+         if (remainder2 === 0)
+         {
+            numbers[i] = "fizz"
+         }
+
+         var remainder3 = i % 3;
+         if (remainder3 === 0)
+         {
+            numbers[i] = "buzz"
+         }
+
+         if (remainder2 && remainder3 === 0)
+         {numbers[i] ="fizz buzz"}
       }
       console.log(numbers);
+
+
    </script>
 
 </body>
