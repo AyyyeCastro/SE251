@@ -10,12 +10,12 @@
 </head>
 <body>
    
-   <!-- Hello World alert -->
+   <!-- hello world -->
    <script type="text/javascript">
       alert("Hello world!");
    </script>
 
-   <!-- Variables -->
+   <!-- Varying variables -->
    <script type="text/javascript">
       let a = "andrew";
       let b = 2;
@@ -25,7 +25,7 @@
       console.log(typeof c);
    </script>
 
-   <!-- Functions -->
+   <!-- Functioning functions -->
    <script type="text/javascript">
       function add (a=5, b=2)
       {
@@ -42,7 +42,7 @@
       for(let i = 0; i < numMax; i++)
       {
          numbers.push(i)
-         /* Fizz Buzz, but crappy code edition due to brain still in summer mode. */ 
+         /* Fizz Buzz */ 
          var remainder2 = i % 2;
          if (remainder2 === 0)
          {
@@ -59,9 +59,41 @@
          {numbers[i] ="fizz buzz"}
       }
       console.log(numbers);
+   </script>
 
+   <!-- Objecting Objects-->
+   <script>
+      let objectArray = 
+      [
+         {index: "",
+         label: "",}
+      ]
+      for (let i = 0; i < numMax; i++) 
+      {
+         // Runs 5 times, with values of i 0 through 4.
+         
+         objectArray.index = i
+
+         var remainder2 = i % 2;
+         if (remainder2 === 0)
+         {
+            objectArray.label = "fizz"
+         }
+
+         var remainder3 = i % 3;
+         if (remainder3 === 0)
+         {
+            objectArray.label = "buzz"
+         }
+
+         if (remainder2 && remainder3 === 0)
+         {objectArray.label ="fizz buzz"}
+
+         console.log("index:",objectArray.index,"Label:",objectArray.label)
+      }
 
    </script>
+
 
 </body>
 </html>
