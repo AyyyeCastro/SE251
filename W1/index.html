@@ -27,11 +27,24 @@
 
    <!-- Functions -->
    <script type="text/javascript">
-      function add (a=2, b=3)
+      function add (a=5, b=2)
       {
          return a + b;
       }
-      console.log(add());
+      console.log("5+2=", add());
    </script>
+
+   <!-- Loopy loops that loop -->
+   <script type="text/javascript">
+      var numbers = []
+      var numMax = 100
+
+      for(let i = 0; i < numMax; i++)
+      {
+         numbers.push(i+1)
+      }
+      console.log(numbers);
+   </script>
+
 </body>
 </html>
