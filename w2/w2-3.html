@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+   <script>
+      fetch('https://se251-node.herokuapp.com/w2')
+      .then((response) => response.json())
+      .then((people) => {
+
+         
+         //Select the body 
+         var body = document.querySelector(`body`)
+         var str = ``
+
+         for(let i =0; i<people.length; i++)
+         {
+            // for each iteration within the loop, create a div, and assign a border class. 
+            str +=`<div class ="border">`
+            // for each VALUE inside the people array -> 
+            for(value in people[i])
+            {
+
+               str += `<p>`
+               str += `${value}: ${people[i][value]}`
+               str += `</p>`
+            }
+            //close the divs for each iteration.
+            str +=`</div>`
+         }
+
+         body.innerHTML = str;
+
+         console.log(people)
+      });
+
+
+   </script>
+</body>
+</html>
