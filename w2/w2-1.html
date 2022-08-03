@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 2 Files</title>
+<style type="text/css">
+	.border{border:1px solid black;}
+</style>
+</head>
+
+<body>
+</body>
+
+<script type="text/javascript">
+
+	//Use this Array of objects to complete the assignment.
+	var people =[
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+		{first:"Marion", last:"Cobretti", credit:"Cobra" }
+	];
+	
+	var body = document.querySelector(`body`)
+
+	for(let i =0; i<people.length; i++)
+	{
+		var div = document.createElement('div')
+		div.setAttribute("id", String(i));
+
+
+		for(value in people)
+		{
+			 var p= document.createElement("p");
+			 var first = document.createTextNode(people[i].first + ' | ');
+
+			 var p1= document.createElement("p");
+			 var last = document.createTextNode(people[i].last+ ' | ');
+
+			 var p2= document.createElement("p");
+			 var credit = document.createTextNode(people[i].credit+ ' ');
+		}
+
+		p.appendChild(first);
+		document.body.appendChild(p)
+
+		p.appendChild(last);
+		document.body.appendChild(p1)
+
+		p.appendChild(credit);
+		document.body.appendChild(p2)
+
+		div.appendChild(p);
+		div.setAttribute(`class`, `border`)
+		body.appendChild(div)
+		
+	}
+
+
+
+
+
+	
+
+
+	// *** old method
+	// //Select the body 
+	// var body = document.querySelector(`body`)
+	// var message = ``
+
+	// for(let i =0; i<people.length; i++)
+	// {
+	// 	// for each iteration within the loop, create a div, and assign a border class. 
+	// 	message +=`<div class ="border">`
+	// 	// for each VALUE inside the people array -> 
+	// 	for(value in people[i])
+	// 	{
+
+	// 		message += `<p>`
+	// 		message += `${value}: ${people[i][value]}`
+	// 		message += `</p>`
+	// 	}
+	// 	//close the divs for each iteration.
+	// 	message +=`</div>`
+	// }
+
+
+	// body.innerHTML += message
+	
+
+
+
+</script>
+
+</html>
