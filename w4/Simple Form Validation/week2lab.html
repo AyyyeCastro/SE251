@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 2 Lab</title>
+<link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div id="form" onsubmit="return false"> <!-- I added "onsubmit="return false" because it was very annoying testing this with the submit refresh.-->
+    <form name="info" class="">
+    <p id="fNameLbl">
+        First Name <br />
+        <input type="text" id="fName"/> <span id="fn-error"> </span>
+    </p>
+    
+    <p id="lNameLbl">
+        Last Name <br />
+        <input type="text" id="lName"/> <span id="ln-error"> </span>
+    </p>
+    
+    <p id="emailLbl">
+        Email <br />
+        <input type="text" id="email"/> <span id="email-error"> </span>
+    </p>
+    
+    <p id="pnLbl"> 
+        Phone Number <br />
+        <input type="text" id="phone"/> <span id="phone-error"> </span>
+    </p>
+    <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div id="confirmation">
+	<h2>Confirmation</h2>
+    <p id="info">
+    </p>
+    <br><br>
+    <p id="justLettingYouKnow"><i>I did the logging below for practice work, please ignore.</i></p>
+    <p id="logs">
+    </p>
+</div>
+<script type="text/javascript" src="week2.js"></script>
+</body>
+</html>
+

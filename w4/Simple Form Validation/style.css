@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+#form 
+{
+	position:relative;
+	width: 400px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#aaa;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+#confirmation
+{
+	position: relative;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #aaa;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+/* hide an element */
+.hide
+{
+	display: none;
+}
+
+/* If there is an empty field, give the label this class. Change text to red. */
+.lblError
+{
+	color: red;
+	/* emphasize for attention */
+	font-size: large;
+}
+
+.lblGood
+{
+	color: black;
+}
+
