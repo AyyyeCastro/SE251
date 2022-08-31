@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>W5 | Form Val POST</title>
+</head>
+<body>
+   <form method="POST" action="https://se251-node.herokuapp.com/w6" id="form">
+      <input type="text" placeholder="First Name" name="first" value="Andrew" id="fName" required>
+      <input type="text" placeholder="Last Name" name="last" value="Castro" id="lName" required>
+      <input type="email" placeholder="Email" name="email" value="acastro@nonyabussiness.com" id="email" required>
+      <input type="email" placeholder="Confirm-Email" name="email" value="acastro@nonyabussiness.com" id="email-confirm" required>
+      <button type="submit">Submit</button>
+   </form>
+   <script type="text/javascript" src="active.js"></script>
+
+   <br/>
+   <div><p>I sent an email regarding the email validation state becoming frozen. Uploading for you to see the program live to help w/ feedback!</p>
+      <ol>
+         <li>If the emails match, the form submission works perfectly.</li>
+         <li>If one of the emails mismatch, the custom validity shows and is reported.</li>
+         <li> If both the emails match, AFTER THE MISMATCH is logged, the system validation still reports as invalid and won't submit- even though they're a match now. </li>
+         <li>Refreshing the page restarts the steps. </li>
+      </ol>
+   </div>
+</body>
+</html>
