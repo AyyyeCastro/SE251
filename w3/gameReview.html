@@ -80,20 +80,20 @@
 		var GameLinks = document.querySelectorAll('.reviews')
 
 		// loop through the GameLinks length.
-		for(i=0;i<GameLinks.length; i++)
+		for(let i =0; i<GameLinks.length; i++)
 		{	
 			// can't grab whole array, use [i] to grab individual elements. 
 			// Within the function selectReview do the following:
 			GameLinks[i].addEventListener('click', (e)=>
 			{
 				//set image src
-				GameImg.src = "Images/" + this.dataset.img;
+				GameImg.src = "Images/" +`${reviews[i].imageName}`;
 				
 				//set the innerText  of gameTitle to this.text
-				GameTitle.innerHTML=this.Text;
+				GameTitle.innerHTML=`${reviews[i].gameTitle}`
 				e.preventDefault();
 			})		
 		}
   });
-  
+
 </script>
