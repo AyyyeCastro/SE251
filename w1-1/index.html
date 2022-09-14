@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>SE251 | W1</title>
+   <meta name="description" content="Week 1">
+   <meta name="author" content="Castro">
+</head>
+<body>
+   
+   <!-- hello world -->
+   <script type="text/javascript">
+      alert("Hello world!");
+   </script>
+
+   <!-- Varying variables -->
+   <script type="text/javascript">
+      let a = "andrew";      /* store a string */
+      let b = 2;             /* store a number */
+      let c = false;         /* store a bool */
+      //console.log(typeof a);
+      //console.log(typeof b);
+      //console.log(typeof c);
+   </script>  <!-- End of Week 1-1 -->
+
+
+   <!-- Functioning functions -->
+   <script type="text/javascript">
+      function add (a=5, b=2)
+      {
+         return a + b;
+      }
+      //console.log("5+2=", add());
+   </script>
+
+   <!-- Loopy loops that loop -->
+   <script type="text/javascript">
+      var max=100;
+      var myArray =[];
+
+      for(i=0; i<max;i++)
+      {
+         myArray.push(i+1);   
+         
+         //Could have done this in one loop, but I like seeing the assignments separated
+         // FIZZ BUZZ 
+         for(index = 0; index < myArray.length; index ++)
+         {
+
+            if (myArray[index] % 2 == 0 && myArray[index] % 3 == 0)
+            {myArray[index] = "fizz buzz"};  
+            
+            var remainder2 = myArray[index] % 2;
+            if (remainder2 == 0)
+            {
+               myArray[index]='fizz';
+            }
+
+            var remainder3 = myArray[index] % 3;
+            if (remainder3 == 0)
+            {
+               myArray[index] = "buzz";
+            } 
+         }
+      }
+      //console.log(myArray);
+   </script>
+
+<!-- OBJECTING OBJECTS THAT OBJECT -->
+<script type="text/javascript">
+   var max=100;
+   var myArray =[{}];
+
+   for(i=0; i<max;i++)
+      {
+         myArray[i]={} // get it in here 
+         myArray[i].index = i+1  // increment da numbas  
+         
+         //Could have done this in one loop, but I like seeing the assignments separated
+         // FIZZ BUZZ 
+         for(index = 0; index < myArray.length; index ++)
+         {
+            var remainder2 = myArray[index].index % 2;
+            if (remainder2 == 0)
+            {
+               myArray[index].label='fizz';
+            }
+
+            var remainder3 = myArray[index].index % 3;
+            if (remainder3 == 0)
+            {
+               myArray[index].label = "buzz";
+            } 
+
+            if (myArray[index].index % 2 == 0 && myArray[index].index % 3 == 0)
+            {myArray[index].label = "fizz buzz"};  
+         }
+         
+         console.log(myArray[i]);
+      }
+   
+
+</script>
+
+</body>
+</html>

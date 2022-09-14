@@ -13,33 +13,25 @@
 			<div class='col-md-8'>
 				<h1>Game Reviews</h1>
 				
+				
 				<table class="table table-striped">
-
 				<thead>
-				<tr>
+				  <tr>
 					<th>Game Title</th>
 					<th>Console</th>
 					<th>Rating</th>
 					<th>Score</th>
-				</tr>
+				  </tr>
 				</thead>
-
-				<tbody id="reviewsBody">
-					
+				<tbody id="reviewsBody">	
 				</tbody>
-
-			</table>
-		</div>
-		
-		<div class='col-md-4' style='margin-top:200px;'>
-			<h2 id="gameTitle">
-
-			</h2>
-
-			<div id='gameImage'>
-				<p>I couldn't figure out how to set the links + grab them + populate it to the div w/ the img specific to the game.
-					<br><br>Submitting so I don't forget before week9, so I can get partial grade.
-				</p>
+			  </table>
+		  </div>
+		 
+		  <div class='col-md-4' style='margin-top:200px;'>
+			<h2 id="gameTitle"></h2>
+				<img id='gameImage'  src=''>
+		  </div>
 		</div>
 	</div>
 </body>
@@ -51,18 +43,24 @@
   .then((response) => response.json())
   .then((reviews) =>{
 
+		// dont use element By ID or class - it's old lol
 		var ReviewsBody = document.getElementById(`reviewsBody`)
 		var GameTitle = document.getElementById(`gameTitle`)
 		var GameImg = document.getElementById(`gameImage`)
-		var str = ``
+		var str = ``;
+		var str2 =``;
+
+		//log the reviews array
+		console.log(reviews)
 
 		// Loop through the reviews object to create the tr and tds through Javascript.
 		for(let i =0; i<reviews.length; i++)
 		{
 			// Don't give it a <table> it already has one assigned.  there are 4 <th> so u need 4 <td>, each pair representing the <th>.
 			str += `<tr>`
-				str += `<td>`              
-					str +=  `<a href="images/${reviews[i].imageName}">${reviews[i].gameTitle}</a> `
+				str += `<td>`   
+					// data set img           								// set the data-img to the reviews.imageName
+					str +=  `<a href="#" class='reviews' data-img="${reviews[i].imageName}">${reviews[i].gameTitle}</a>`
 				str += `</td>`
 				str += `<td>`
 					str += `${reviews[i].consoles}`
@@ -78,6 +76,24 @@
 		//send that info the reviewsbody div, thats inside the table.
 		ReviewsBody.innerHTML = str;
 
-  });
+		// Gather all the links by grabbing it's class, rather than 'a'
+		var GameLinks = document.querySelectorAll('.reviews')
 
+		// loop through the GameLinks length.
+		for(i=0;i<GameLinks.length; i++)
+		{	
+			// can't grab whole array, use [i] to grab individual elements. 
+			// Within the function selectReview do the following:
+			GameLinks[i].addEventListener('click', (e)=>
+			{
+				//set image src
+				GameImg.src = "Images/" + this.dataset.img;
+				
+				//set the innerText  of gameTitle to this.text
+				GameTitle.innerHTML=this.Text;
+				e.preventDefault();
+			})		
+		}
+  });
+  
 </script>
